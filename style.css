@@ -1,0 +1,349 @@
+@font-face {
+    font-family: "OpenSans";
+    src: url(/fonts/OpenSans-Regular.eot) format("embedded-opentype"),
+        url(/fonts/OpenSans-Regular.ttf) format("truetype"),
+        url(/fonts/OpenSans-Regular.woff) format("woff");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "OpenSans Bold";
+    src: url(/fonts/OpenSans-Bold.eot) format("embedded-opentype"),
+        url(/fonts/OpenSans-Bold.ttf) format("truetype"),
+        url(/fonts/OpenSans-Bold.woff) format("woff");
+    font-style: normal;
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "Gotham Pro Bold";
+    src: url(/fonts/GothamPro-Bold.eot) format("embedded-opentype"),
+        url(/fonts/GothamPro-Bold.ttf) format("truetype"),
+        url(/fonts/GothamPro-Bold.woff) format("woff");
+    font-style: normal;
+    font-weight: bold;
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+.container {
+    width: 320px;
+    margin: 0 auto;
+    border: 1px solid black;
+}
+
+/* стили хэдэра */
+.header_nav {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.logo {
+    text-transform: capitalize;
+    color: black;
+    padding-top: 36px;
+    padding-bottom: 24px;
+    font-family: "OpenSans";
+    font-size: 16px;
+    position: relative;
+}
+
+.logo::before {
+    content: "";
+    position: absolute;
+    width: 46px;
+    height: 46px;
+    background-color: rgb(247, 223, 8);
+    background-image: url(./img/icon_sofa.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50%;
+    top: 20px;
+    left: -56px;
+}
+
+.logo span {
+    text-transform: uppercase;
+    font-family: "OpenSans Bold";
+}
+
+.nav_list {
+    padding-bottom: 28px;
+}
+
+.nav_list-item {
+    position: relative;
+}
+
+.nav_list-item:last-child::before {
+    content: "";
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    background-image: url(./img/icon_viber.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    top: -3px;
+    left: -24px;
+}
+
+.nav_list-item a {
+    color: black;
+    font-family: "OpenSans Bold";
+    font-size: 16px;
+}
+
+/* стили секции 1 */
+.s1 {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    color: white;
+    background-color: #535353;
+    background-image: url(./img/background_s1.png);
+    background-blend-mode: overlay;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.s1_title {
+    text-transform: capitalize;
+    font-size: 36px;
+    margin: 0 20px;
+    font-family: "Gotham Pro Bold";
+    padding-top: 74px;
+    padding-bottom: 26px;
+}
+
+.s1_list {
+    font-family: "OpenSans";
+    font-size: 14px;
+    padding-left: 46px;
+    margin-right: 20px;
+    padding-bottom: 136px;
+    position: relative;
+}
+
+.s1_list::before,
+.s1_list::after {
+    content: "/";
+    position: absolute;
+    font-size: 30px;
+    font-weight: bold;
+    top: 62%;
+    color: rgb(247, 223, 8);
+}
+
+.s1_list::before {
+    transform: rotate(-65deg);
+    left: 44%;
+}
+
+.s1_list::after {
+    left: 50%;
+    transform: rotate(25deg);
+}
+
+.s1_list-item {
+    padding-bottom: 16px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.s1_list-item::before {
+    content: "";
+    width: 14px;
+    height: 14px;
+    background-image: url(./img/icon_star.png);
+    position: absolute;
+    top: 3px;
+    left: -10px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.s1_list-item span {
+    color: rgb(236, 214, 15);
+}
+
+/*стили секции 2*/
+
+.s2 {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.s2_title {
+    display: block;
+    text-align: center;
+    padding-top: 67px;
+    margin-bottom: 76px;
+}
+
+.s2_list {
+    display: flex;
+    flex-flow: column;
+}
+
+.s2_list-item {
+    width: 170px;
+    height: 170px;
+    border: 2px solid rgb(247, 223, 8);
+    margin-bottom: 58px;
+    padding: 50px;
+    position: relative;
+}
+
+.s2_list-item::before {
+    content: "";
+    width: 85px;
+    height: 85px;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50%;
+    background-color: rgb(247, 223, 8);
+    top: -41px;
+    left: 38px;
+}
+
+.s2_list-item:nth-child(1)::before {
+    background-image: url(./img/icon1.png);
+}
+
+.s2_list-item:nth-child(2)::before {
+    background-image: url(./img/icon2.png);
+}
+
+.s2_list-item:nth-child(3)::before {
+    background-image: url(./img/icon3.png);
+}
+
+.s2_list-item:nth-child(4)::before {
+    background-image: url(./img/icon4.png);
+}
+
+.s2_list-item p {
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: "OpenSans";
+    margin-bottom: 5px;
+    padding: 1px;
+}
+
+/*стили секции 3*/
+
+.s3 {
+    display: flex;
+    flex-flow: row;
+    color: white;
+    background-color: #535353;
+    background-image: url(./img/background_s3.png);
+    background-blend-mode: overlay;
+    background-position: center;
+    background-size: cover;
+}
+
+.ant-carousel {
+    width: auto;
+    position: relative;
+}
+
+.ant-carousel-hider {
+    overflow: hidden;
+}
+
+.ant-carousel-list {
+    display: flex;
+    justify-content: flex-start;
+    width: auto;
+    padding-bottom: 84px;
+}
+
+.ant-carousel-element {
+    display: block;
+    text-align: center;
+    margin: 0 20px;
+    margin-top: 72px;
+    /* flex: 0 0 auto; */
+}
+
+.ant-carousel-element img{
+    width: 280px;
+    height: 230px;
+    position: sticky;
+    /*border: 15px solid white;*/
+}
+
+.ant-carousel-element p {
+    color: white;
+    font-family: "OpenSans";
+    font-size: 16px;
+    font-weight: bold;
+    position: relative;
+    margin-top: 18px;
+}
+
+.ant-carousel-element p::before {
+    content: "";
+    position: absolute;
+    width: 40px;
+    border: 1px solid rgb(247, 223, 8);
+    top: 8px;
+    left: 1px;
+}
+
+.ant-carousel-arrow-left,
+.ant-carousel-arrow-right {
+    width: 25px;
+    height: 40px;
+    position: absolute;
+    cursor: crosshair;
+}
+
+/* .ant-carousel-arrow-left:hover,
+.ant-carousel-arrow-right:hover {
+
+} */
+
+/* левая стрелка слайдера */
+div.ant-carousel-arrow-left {
+    left: 5px;
+    top: 44%;
+    display: block;
+    background: url("http://pvbk.spb.ru/inc/carousel/ant-files/ant-arrow-left.png") no-repeat;
+}
+
+/* правая стрелка слайдера */
+div.ant-carousel-arrow-right {
+    right: 5px;
+    top: 44%;
+    display: block;
+    background: url("http://pvbk.spb.ru/inc/carousel/ant-files/ant-arrow-right.png") no-repeat;
+}
+/* стили футера */
+footer {
+    background-color: black;
+    color: grey;
+    font-family: "OpenSans";
+    font-size: 12px;
+    text-align: center;
+    padding: 25px 0;
+}
