@@ -78,7 +78,14 @@ ul {
 
 .logo span {
     text-transform: uppercase;
-    font-family: "OpenSans Bold";
+    font-family: "Gotham Pro Bold";
+    font-weight: bold;
+}
+
+.nav_list-item span {
+    text-transform: uppercase;
+    font-family: "Gotham Pro Bold";
+    font-weight: bold;
 }
 
 .nav_list {
@@ -87,6 +94,12 @@ ul {
 
 .nav_list-item {
     position: relative;
+}
+
+.nav_list-item a:hover,
+.nav_list-item a:focus {
+    color: rgb(247, 223, 8);
+    font-size: large;
 }
 
 .nav_list-item:last-child::before {
@@ -199,6 +212,13 @@ ul {
 .s2_list {
     display: flex;
     flex-flow: column;
+}
+
+.s2_list-item:hover {
+    background-color: black;
+    color: white;
+    border: 10px solid rgb(247, 223, 8);
+    transform: scale(1.2);
 }
 
 .s2_list-item {
