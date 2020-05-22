@@ -67,7 +67,7 @@ ul {
     position: absolute;
     width: 46px;
     height: 46px;
-    background-color: rgb(247, 223, 8);
+    background-color: red;
     background-image: url(./img/icon_sofa.png);
     background-repeat: no-repeat;
     background-position: center;
