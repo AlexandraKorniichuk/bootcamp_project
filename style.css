@@ -153,19 +153,19 @@ ul {
 .s1_list::after {
     content: "/";
     position: absolute;
-    font-size: 30px;
+    font-size: 27px;
     font-weight: bold;
     top: 62%;
     color: rgb(247, 223, 8);
 }
 
 .s1_list::before {
-    transform: rotate(-65deg);
+    transform: rotate(-66deg);
     left: 44%;
 }
 
 .s1_list::after {
-    left: 50%;
+    left: 49%;
     transform: rotate(25deg);
 }
 
@@ -509,12 +509,6 @@ div.ant-carousel-arrow-right {
     background-repeat: no-repeat;
     background-position: center;
     left: 46px;
-}
-
-.contacts a:hover,
-.contacts a:focus {
-  color: red;
-  font-size: large;
 }
 
 .contacts {
