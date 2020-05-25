@@ -54,7 +54,7 @@ ul {
 
 /* стили хэдэра */
 header {
-    background-color: rgb(126, 16, 170);
+  background-color: rgb(126, 16, 170);
 }
 .header_nav {
   display: flex;
@@ -426,6 +426,19 @@ div.ant-carousel-arrow-right {
   background-color: #3e054d;
 }
 
+.s5_first {
+  padding-top: 50px;
+}
+
+.s5_first::after {
+  content: "";
+  position: absolute;
+  width: 40px;
+  border: 1px solid rgb(247, 223, 8);
+  top: 113px;
+  left: 32px;
+}
+
 .s5_list {
   display: flex;
   flex-flow: column;
@@ -456,7 +469,8 @@ div.ant-carousel-arrow-right {
   left: 30px;
 }
 
-.s5_list-title {
+.s5_list-title,
+.s5_first {
   padding-left: 32px;
   margin: 0 20px;
   text-transform: uppercase;
@@ -473,7 +487,7 @@ div.ant-carousel-arrow-right {
   position: absolute;
   width: 40px;
   border: 1px solid rgb(247, 223, 8);
-  top: 68px;
+  top: 66px;
   left: 32px;
 }
 
