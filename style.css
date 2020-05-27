@@ -223,6 +223,7 @@ header {
 .s2_list {
   display: flex;
   flex-flow: column;
+  justify-content: center;
 }
 
 .s2_list-item:hover {
@@ -353,6 +354,7 @@ header {
   position: absolute;
   width: 38px;
   border: 1px solid rgb(247, 223, 8);
+  background-color: rgb(247, 223, 8);
   top: 10px;
   left: 0;
 }
@@ -442,6 +444,7 @@ div.ant-carousel-arrow-right {
   display: block;
   height: 240px;
   border: 1px solid rgb(247, 223, 8);
+  background-color: rgb(247, 223, 8);
   top: 50px;
   left: 28px;
 }
@@ -454,7 +457,7 @@ div.ant-carousel-arrow-right {
 .s5 {
   display: flex;
   flex-flow: column;
-  align-items: flex-start;
+  align-items: center;
   background-color: #3e054d;
   padding-top: 50px;
 }
@@ -506,8 +509,13 @@ div.ant-carousel-arrow-right {
   position: absolute;
   width: 40px;
   border: 1px solid rgb(247, 223, 8);
+  background-color: rgb(247, 223, 8);
   top: 36px;
   left: 32px;
+}
+
+.first-list {
+  margin-left: -16px;
 }
 
 .contacts li {
@@ -524,6 +532,10 @@ div.ant-carousel-arrow-right {
   background-repeat: no-repeat;
   background-position: center;
   left: 46px;
+}
+
+.contacts_div {
+  margin-left: -105px;
 }
 
 .contacts {
@@ -610,6 +622,7 @@ footer {
     content: "";
     position: absolute;
     border: 1px solid rgb(247, 223, 8);
+    background-color: rgb(247, 223, 8);
     height: 28px;
     top: -4px;
     right: 19px;
@@ -681,7 +694,7 @@ footer {
 
   .s2_list {
     flex-flow: row;
-    justify-content: space-around;
+    justify-content: space-between;
     margin: 0 40px;
     padding-bottom: 89px;
   }
@@ -832,6 +845,88 @@ footer {
     font-size: 14px;
     font-weight: bold;
     padding: 25px 0;
+  }
+}
+
+/* стили для desktop */
+@media (min-width: 1280px) {
+  .container {
+    min-width: 1280px;
+  }
+  
+  .header_nav {
+    margin: 0 60px;
+  }
+
+  .logo {
+    font-size: 24px;
+  }
+
+  .nav_list-item a {
+    font-size: 20px;
+  }
+
+  /* стили секции 1 */
+  .s1 {
+    background-image: url(./img/bg_s1_dt.jpg);
+  }
+
+  .s1_title {
+    font-size: 72px;
+    padding: 229px 0 24px 135px;
+    margin: 0;
+  }
+
+  .s1_list {
+    font-size: 24px;
+    padding-left: 159px;
+    padding-top: 98px;
+    margin: 0;
+    line-height: 50px;
+  }
+
+  .s1_list-item {
+    padding-left: 29px;
+  }
+
+  .s1_list-title::before {
+    top: 10px;
+    left: 0;
+  }
+
+  .s1_list-item::before {
+    top: 19px;
+  }
+
+  /* стили секции 2 */
+  .s2_title{
+    font-size: 44px;
+    padding-top: 78px;
+  }
+
+  .s2_list {
+    width: 768px;
+    padding-top: 24px;
+    padding-bottom: 90px;
+  }
+
+  .s2_list-item {
+    width: 178px;
+    height: 164px;
+  }
+  
+  .s2_list-item::before {
+    top: -40px;
+    left: 46px;
+  }
+
+  .s2_list-item:hover::before {
+    left: 41px;
+  }
+
+  /* стили секции 3 */
+  .s3 {
+    background-image: url(./img/bg_s3_dt.jpg);
   }
 
 }
