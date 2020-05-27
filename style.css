@@ -451,8 +451,10 @@ div.ant-carousel-arrow-right {
 }
 
 /* стиои секции 5 */
-
 .s5 {
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
   background-color: #3e054d;
   padding-top: 50px;
 }
@@ -474,7 +476,8 @@ div.ant-carousel-arrow-right {
   position: relative;
 }
 
-.list-special li::before {
+.list-special li::before,
+.list-noTitle li::before {
   content: "";
   position: absolute;
   width: 30px;
@@ -547,6 +550,10 @@ div.ant-carousel-arrow-right {
 .contacts a:focus {
   color: rgb(247, 223, 8);
   transform: matrix(1.2);
+}
+
+.contacts li:last-child p {
+  padding-left: 45px;
 }
 
 /* стили футера */
@@ -789,6 +796,42 @@ footer {
 
   .s4_list-item:last-child {
     display: block;
+  }
+
+  /* стиои секции 5 */
+  .s5 {
+    flex-flow: column wrap;
+    height: 600px;
+  }
+
+  .s5_list {
+    margin-top: -20px;
+  }
+  .s5_list li {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .list-special li::before,
+  .list-noTitle li::before {
+    top: -4px;
+  }
+
+  .s5_list-title {
+    padding-bottom: 26px;
+    font-size: 16px;
+    line-height: 28px;
+  }
+
+  .managers {
+    font-size: 15px;
+  }
+
+  /* стили футера */
+  footer {
+    font-size: 14px;
+    font-weight: bold;
+    padding: 25px 0;
   }
 
 }
