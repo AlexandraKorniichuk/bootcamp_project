@@ -759,7 +759,7 @@ footer {
   }
 
   .ant-carousel-hider {
-    justify-content: start;
+    justify-content: center;
     width: 768px;
   }
 
@@ -860,10 +860,20 @@ footer {
 
   .logo {
     font-size: 24px;
+    font-family: "OpenSans";
   }
 
   .nav_list-item a {
     font-size: 20px;
+  }
+
+  .logo span,
+  .nav_list-item span {
+    font-family: "Gotham Pro Bold";
+  }
+
+  .nav_list-item a {
+    font-family: "OpenSans Bold";
   }
 
   /* стили секции 1 */
@@ -875,6 +885,7 @@ footer {
     font-size: 72px;
     padding: 229px 0 24px 135px;
     margin: 0;
+    font-family: "Gotham Pro Bold";
   }
 
   .s1_list {
@@ -883,6 +894,7 @@ footer {
     padding-top: 98px;
     margin: 0;
     line-height: 50px;
+    font-family: "OpenSans";
   }
 
   .s1_list-item {
@@ -899,9 +911,10 @@ footer {
   }
 
   /* стили секции 2 */
-  .s2_title{
+  .s2_title {
     font-size: 44px;
     padding-top: 78px;
+    font-family: "Gotham Pro Bold";
   }
 
   .s2_list {
@@ -924,9 +937,62 @@ footer {
     left: 41px;
   }
 
+  .s2_list-item p {
+    font-family: "OpenSans";
+  }
+
   /* стили секции 3 */
   .s3 {
     background-image: url(./img/bg_s3_dt.jpg);
+  }
+
+  .ant-carousel-element {
+    width: 570px;
+    margin: 0 25px;
+    margin-top: 88px;
+    margin-bottom: 30px;
+  }
+
+  .ant-carousel-hider {
+    width: 1280px;
+  }
+  
+  .ant-carousel-element img {
+    width: 570px;
+    height: 344px;
+  }
+
+  div.ant-carousel-arrow-left {
+    left: 20px;
+  }
+
+  div.ant-carousel-arrow-right {
+    right: 20px;
+  }
+
+  .ant-carousel-element p {
+    font-size: 20px;
+    font-family: "OpenSans";
+  }
+
+  /* стили секции 4 */
+  .s4_desc {
+    font-family: "Gotham Pro Bold";
+    font-size: 34px;
+    line-height: 40px;
+    margin: 0 60px;
+    padding-left: 250px;
+    text-align: left;
+  }
+
+  .s4_desc::before {
+    top: 80%;
+    left: 9%;
+    font-size: 250px;
+  }
+
+  .s4_list {
+    font-family: "OpenSans";
   }
 
 }
