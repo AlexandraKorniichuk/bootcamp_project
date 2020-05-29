@@ -858,20 +858,10 @@ footer {
 
   .logo {
     font-size: 24px;
-    font-family: "OpenSans";
   }
 
   .nav_list-item a {
     font-size: 20px;
-  }
-
-  .logo span,
-  .nav_list-item span {
-    font-family: "Gotham Pro Bold";
-  }
-
-  .nav_list-item a {
-    font-family: "OpenSans Bold";
   }
 
   /* стили секции 1 */
@@ -883,7 +873,6 @@ footer {
     font-size: 72px;
     padding: 229px 0 24px 135px;
     margin: 0;
-    font-family: "Gotham Pro Bold";
   }
 
   .s1_list {
@@ -892,7 +881,6 @@ footer {
     padding-top: 98px;
     margin: 0;
     line-height: 50px;
-    font-family: "OpenSans";
   }
 
   .s1_list-item {
@@ -912,7 +900,6 @@ footer {
   .s2_title {
     font-size: 44px;
     padding-top: 78px;
-    font-family: "Gotham Pro Bold";
   }
 
   .s2_list {
@@ -933,10 +920,6 @@ footer {
 
   .s2_list-item:hover::before {
     left: 41px;
-  }
-
-  .s2_list-item p {
-    font-family: "OpenSans";
   }
 
   /* стили секции 3 */
@@ -970,12 +953,10 @@ footer {
 
   .ant-carousel-element p {
     font-size: 20px;
-    font-family: "OpenSans";
   }
 
   /* стили секции 4 */
   .s4_desc {
-    font-family: "Gotham Pro Bold";
     font-size: 34px;
     line-height: 40px;
     margin: 0 60px;
@@ -989,9 +970,69 @@ footer {
     font-size: 250px;
   }
 
-  .s4_list {
-    font-family: "OpenSans";
+  /* стили секции 5 */
+  .s5 {
+    flex-flow: row wrap;
+    height: auto;
+    padding: 76px 60px 74px 237px;
+    justify-content: space-between;
   }
 
-  /* стили секции 5 */
+  .s5_list-title,
+  .s5_list,
+  .s5_list li {
+    width: 296px;
+  }
+
+  .list-noTitle li,
+  .list-special li {
+    font-size: 18px;
+  }
+
+  .s5 div,
+  .s5_list {
+    padding-bottom: 20px;
+  }
+
+  .first-list {
+    margin-top: 70px;
+  }
+
+  .second-list {
+    margin-top: 50px;
+  }
+
+  .contacts_div {
+    padding-left: 105px;
+  }
+
+  .contacts li a {
+    font-size: 20px;
+  }
+  
+  .contacts {
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-start;
+    width: auto;
+  }
+  
+  .contacts li {
+    width: auto;
+  }
+
+  .managers {
+    font-size: 17px;
+    padding-left: 20px;
+  }
+
+  .contacts li:first-child::after {
+    content: "";
+    position: absolute;
+    border: 1px solid rgb(247, 223, 8);
+    background-color: rgb(247, 223, 8);
+    height: 28px;
+    top: -4px;
+    left: 160%;
+  }
 }
