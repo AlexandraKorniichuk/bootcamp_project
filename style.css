@@ -1,33 +1,33 @@
 @font-face {
   font-family: "OpenSans";
-  src: url(/fonts/OpenSans-Regular.eot) format("embedded-opentype"),
-    url(/fonts/OpenSans-Regular.ttf) format("truetype"),
-    url(/fonts/OpenSans-Regular.woff) format("woff");
+  src: url(./fonts/OpenSans-Regular.eot) format("embedded-opentype"),
+    url(./fonts/OpenSans-Regular.ttf) format("truetype"),
+    url(./fonts/OpenSans-Regular.woff) format("woff");
   font-style: normal;
   font-weight: normal;
 }
 
 @font-face {
   font-family: "OpenSans Bold";
-  src: url(/fonts/OpenSans-Bold.eot) format("embedded-opentype"),
-    url(/fonts/OpenSans-Bold.ttf) format("truetype"),
-    url(/fonts/OpenSans-Bold.woff) format("woff");
+  src: url(./fonts/OpenSans-Bold.eot) format("embedded-opentype"),
+    url(./fonts/OpenSans-Bold.ttf) format("truetype"),
+    url(./fonts/OpenSans-Bold.woff) format("woff");
   font-style: normal;
   font-weight: bold;
 }
 
 @font-face {
   font-family: "Gotham Pro Bold";
-  src: url(/fonts/GothamPro-Bold.eot) format("embedded-opentype"),
-    url(/fonts/GothamPro-Bold.ttf) format("truetype"),
-    url(/fonts/GothamPro-Bold.woff) format("woff");
+  src: url(./fonts/GothamPro-Bold.eot) format("embedded-opentype"),
+    url(./fonts/GothamPro-Bold.ttf) format("truetype"),
+    url(./fonts/GothamPro-Bold.woff) format("woff");
   font-style: normal;
   font-weight: bold;
 }
 
 @font-face {
   font-family: "Coustard Regular";
-  src: url(/fonts/Coustard-Regular.ttf) format("truetype");
+  src: url(./fonts/Coustard-Regular.ttf) format("truetype");
   font-style: normal;
   font-weight: normal;
 }
@@ -312,7 +312,6 @@ header {
   margin: 0 auto;
   width: 320px;
   position: relative;
-
 }
 
 .ant-carousel-list {
@@ -793,9 +792,8 @@ footer {
   }
 
   .s4_list {
- 
     font-size: 19px;
-    margin-left: 350px; 
+    margin-left: 350px;
     margin-right: 40px;
     line-height: 28px;
     padding-top: 44px;
@@ -853,7 +851,7 @@ footer {
   .container {
     min-width: 1280px;
   }
-  
+
   .header_nav {
     margin: 0 60px;
   }
@@ -927,7 +925,7 @@ footer {
     width: 178px;
     height: 164px;
   }
-  
+
   .s2_list-item::before {
     top: -40px;
     left: 46px;
@@ -956,7 +954,7 @@ footer {
   .ant-carousel-hider {
     width: 1280px;
   }
-  
+
   .ant-carousel-element img {
     width: 570px;
     height: 344px;
@@ -995,4 +993,5 @@ footer {
     font-family: "OpenSans";
   }
 
+  /* стили секции 5 */
 }
