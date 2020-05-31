@@ -52,20 +52,30 @@ ul {
 }
 
 /* стили хэдэра */
+.header_wrapper {
+  position: fixed;
+  z-index: 99;
+  width: 100%;
+  top: 15px;
+}
+
 header {
   background-color: rgb(126, 16, 170);
+  z-index: 3;
+  padding: 13px 0;
 }
+
 .header_nav {
   display: flex;
-  flex-flow: column;
+  flex-flow: row wrap;
+  justify-content: space-between;
   align-items: center;
 }
 
 .logo {
   text-transform: capitalize;
   color: white;
-  padding-top: 30px;
-  padding-bottom: 24px;
+  padding-left: 50px;
   font-family: "OpenSans";
   font-size: 16px;
   position: relative;
@@ -81,24 +91,15 @@ header {
   background-repeat: no-repeat;
   background-position: center;
   border-radius: 50%;
-  top: 20px;
-  left: -56px;
+  top: -54%;
+  left: 2px;
 }
 
-.logo span {
-  text-transform: uppercase;
-  font-family: "Gotham Pro Bold";
-  font-weight: bold;
-}
-
+.logo span,
 .nav_list-item span {
   text-transform: uppercase;
   font-family: "Gotham Pro Bold";
   font-weight: bold;
-}
-
-.nav_list {
-  padding-bottom: 28px;
 }
 
 .nav_list-item {
@@ -108,7 +109,7 @@ header {
 .nav_list-item a {
   color: white;
   font-family: "OpenSans Bold";
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .nav_list-item a:hover,
@@ -116,6 +117,113 @@ header {
   color: rgb(247, 223, 8);
   font-size: large;
 }
+
+.header ul {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: inherit;
+  overflow: hidden;
+  padding-bottom: 7px;
+}
+
+.header li {
+  padding-top: 20px;
+}
+
+.header li a {
+  display: block;
+  padding: 0 5px;
+  color: white;
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 10px;
+  font-family: "OpenSans";
+}
+
+
+.header li a:hover,
+.header .menu-btn:hover {
+  background-color: black;
+  font-weight: bold;
+}
+
+/* menu */
+/* задаем параметры для списка навигации при гамбургере */
+.header .menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height 0.2s ease-out;
+}
+
+/* обертка гамбургера */
+.header .menu-icon {
+  display: flex;
+  padding: 10px;
+  position: relative;
+  user-select: none;
+  cursor: pointer;
+}
+
+.header .menu-icon .navicon {
+  display: block;
+  background: rgb(247, 223, 8);
+  width: 20px;
+  height: 3px;
+  position: relative;
+}
+
+.header .menu-icon .navicon::before,
+.header .menu-icon .navicon::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: black;
+}
+
+.header .menu-icon .navicon::before {
+  top: 5px;
+}
+
+.header .menu-icon .navicon::after {
+  top: -5px;
+}
+
+.header .menu-icon .navicon {
+  transition: background 0.2s ease-out;
+}
+
+.header .menu-btn:checked~.menu-icon .navicon {
+  background: transparent;
+}
+
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+  transition: all 0.2s ease-out;
+}
+
+.header .menu-btn:checked~.menu {
+  max-height: 100%;
+}
+
+.header .menu-btn:checked~.menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+
+.header .menu-btn:checked~.menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+
+.header .menu-btn:checked~.menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked~.menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+
+.header .menu-btn {
+  display: none;
+}
+
 
 /* стили секции 1 */
 .s1 {
@@ -161,7 +269,7 @@ header {
   position: relative;
 }
 
-.s1_bottom-element::before,
+/* .s1_bottom-element::before,
 .s1_bottom-element::after {
   content: "/";
   position: absolute;
@@ -177,7 +285,7 @@ header {
 
 .s1_bottom-element::after {
   transform: rotate(26deg);
-}
+} */
 
 .s1_list-item {
   padding-bottom: 16px;

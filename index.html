@@ -8,21 +8,30 @@
   </head>
 
   <body>
-    <header class="container">
-      <nav class="header_nav">
-        <a class="logo" href="#">family<span>games</span></a>
-        <ul class="nav_list">
-          <li class="nav_list-item">
-            <a href="#"><span>+38 073 070 93 32</span></a>
-          </li>
-          <li class="nav_list-item">
-            <a href="#"><span>+38 063 241 41 75</span></a>
-          </li>
-        </ul>
-      </nav>
-    </header>
+    <div class="header_wrapper">
+      <header class="header container">
+        <nav class="header_nav">
+          <a class="logo" href="#">family<span>games</span></a>
+          <input class="menu-btn" type="checkbox" id="menu-btn" />
+          <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+          <ul class="menu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#shop">Shop</a></li>
+            <li><a href="#photos">Photos</a></li>
+            <li><a href="#club">Club</a></li>
+            <li><a href="#contacts">Conatcts</a></li>
+            <li class="nav_list-item">
+              <a href="#"><span>+38 073 070 93 32</span></a>
+            </li>
+            <li class="nav_list-item">
+              <a href="#"><span>+38 063 241 41 75</span></a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+    </div>
     <main class="container">
-      <section class="s1">
+      <section class="s1" id="home">
         <h2 class="s1_title">Настольные игры</h2>
         <ul class="s1_list">
           <li class="s1_list-item">интернет-магазин</li>
@@ -35,7 +44,8 @@
         </ul>
         <div class="s1_bottom-element"></div>
       </section>
-      <section class="s2">
+
+      <section class="s2" id="shop">
         <h2 class="s2_title">Интернет-магазин и магазин настольных игр</h2>
         <ul class="s2_list">
           <li class="s2_list-item">
@@ -52,7 +62,8 @@
           </li>
         </ul>
       </section>
-      <section class="s3 ant-carousel">
+
+      <section class="s3 ant-carousel" id="photos">
         <div class="ant-carousel-hider">
           <div class="ant-carousel-arrow-left"></div>
           <ul class="ant-carousel-list">
@@ -85,7 +96,8 @@
         </div>
         <div class="ant-carousel-dots"></div>
       </section>
-      <section class="s4">
+
+      <section class="s4" id="club">
         <p class="s4_desc">
           Предлагаем наш игровой клуб! Вы сможете поиграть в эксклюзивные и
           дорогие игры и завести новые знакомства
@@ -120,7 +132,8 @@
           </li>
         </ul>
       </section>
-      <section class="s5">
+
+      <section class="s5" id="contacts">
         <ul class="s5_list list-noTitle">
           <li>Заказывайте игры в интернете</li>
           <li>Приезжайте в магазин</li>
