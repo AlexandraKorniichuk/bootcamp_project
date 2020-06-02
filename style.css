@@ -70,12 +70,14 @@ header {
   flex-flow: row wrap;
   justify-content: space-between;
   align-items: center;
+  padding-top: 5px;
+  padding-left: 2px;
 }
 
 .logo {
   text-transform: capitalize;
   color: white;
-  padding-left: 50px;
+  padding-left: 52px;
   font-family: "OpenSans";
   font-size: 16px;
   position: relative;
@@ -140,7 +142,6 @@ header {
   font-family: "OpenSans";
 }
 
-
 .header li a:hover,
 .header .menu-btn:hover {
   background-color: black;
@@ -194,7 +195,7 @@ header {
   transition: background 0.2s ease-out;
 }
 
-.header .menu-btn:checked~.menu-icon .navicon {
+.header .menu-btn:checked ~ .menu-icon .navicon {
   background: transparent;
 }
 
@@ -203,27 +204,26 @@ header {
   transition: all 0.2s ease-out;
 }
 
-.header .menu-btn:checked~.menu {
+.header .menu-btn:checked ~ .menu {
   max-height: 100%;
 }
 
-.header .menu-btn:checked~.menu-icon .navicon:before {
+.header .menu-btn:checked ~ .menu-icon .navicon:before {
   transform: rotate(-45deg);
 }
 
-.header .menu-btn:checked~.menu-icon .navicon:after {
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
   transform: rotate(45deg);
 }
 
-.header .menu-btn:checked~.menu-icon:not(.steps) .navicon:before,
-.header .menu-btn:checked~.menu-icon:not(.steps) .navicon:after {
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
   top: 0;
 }
 
 .header .menu-btn {
   display: none;
 }
-
 
 /* стили секции 1 */
 .s1 {
@@ -692,59 +692,46 @@ footer {
   }
   /* стили хэдэра */
   .header_nav {
-    background-color: rgb(126, 16, 170);
-    flex-flow: row;
-    justify-content: space-between;
-    margin: 0 40px;
-    padding: 34px 0;
+    padding: 20px;
+    padding-bottom: 10px;
   }
 
   .header_nav a {
-    left: 50px;
-    font-size: 20px;
+    font-size: 30px;
   }
 
-  .logo {
-    padding: 0;
-    padding-left: 35px;
+  .menu {
+    padding-left: 25px;
+    padding-top: 10px;
+  }
+
+  .header li a {
+    font-size: 25px;
+    margin: 0 5px;
   }
 
   .logo::before {
-    top: -12px;
-    left: -20px;
+    top: -14%;
+    width: 60px;
+    height: 60px;
+    left: -15px;
   }
 
-  .nav_list {
-    padding: 0;
-    display: flex;
-    flex-flow: row;
+  .header .menu-icon .navicon {
+    width: 40px;
+    height: 5px;
   }
 
-  .nav_list-item:first-child {
-    position: relative;
-    padding-right: 40px;
+  .header .menu-icon .navicon::before {
+    top: 10px;
+  }
+  
+  .header .menu-icon .navicon::after {
+    top: -10px;
   }
 
-  .nav_list-item:first-child::after {
-    content: "";
-    position: absolute;
-    border: 1px solid rgb(247, 223, 8);
-    background-color: rgb(247, 223, 8);
-    height: 28px;
-    top: -4px;
-    right: 19px;
-  }
-
-  .nav_list-item a {
-    color: white;
-    font-family: "OpenSans Bold";
-    font-size: 16px;
-  }
-
-  .nav_list-item a:hover,
-  .nav_list-item a:focus {
-    color: rgb(247, 223, 8);
-    font-size: large;
+  .header .menu-icon {
+    padding-left: 400px;
   }
 
   /* стили секции 1 */
@@ -881,7 +868,7 @@ footer {
 
   .ant-carousel-arrow-left,
   .ant-carousel-arrow-right {
-    z-index: 100;
+    z-index: 98;
   }
 
   /* стили секции 4 */
@@ -958,18 +945,6 @@ footer {
 @media (min-width: 1280px) {
   .container {
     min-width: 1280px;
-  }
-
-  .header_nav {
-    margin: 0 60px;
-  }
-
-  .logo {
-    font-size: 24px;
-  }
-
-  .nav_list-item a {
-    font-size: 20px;
   }
 
   /* стили секции 1 */
@@ -1082,7 +1057,7 @@ footer {
   .s5 {
     flex-flow: row wrap;
     height: auto;
-    padding: 76px 60px 74px 237px;
+    padding: 76px 50px 74px 237px;
     justify-content: space-between;
   }
 
@@ -1117,14 +1092,14 @@ footer {
   .contacts li a {
     font-size: 20px;
   }
-  
+
   .contacts {
     display: flex;
     flex-flow: row;
     justify-content: flex-start;
     width: auto;
   }
-  
+
   .contacts li {
     width: auto;
   }
@@ -1143,4 +1118,126 @@ footer {
     top: -4px;
     left: 160%;
   }
+}
+
+@media (min-width: 1804px) {
+  .container {
+    min-width: 1804px;
+  }
+
+  .header .menu-icon {
+    padding-left: 600px;
+  }
+}
+
+.wrap {
+  margin: 0 auto;
+  margin-top: 150px;
+  margin-bottom: 30px;
+  perspective: 1000px;
+  perspective-origin: 50% 50%;
+}
+
+.cube {
+  margin: auto;
+  position: relative;
+  height: 200px;
+  width: 200px;
+  transform-style: preserve-3d;
+}
+
+.cube > div {
+  position: absolute;
+  box-sizing: border-box;
+  padding: 10px;
+  height: 100%;
+  width: 100%;
+  opacity: 0.9;
+  background-color: white;
+  border: solid 2px rgb(114, 53, 138);
+  border-radius: 10%;
+  color: rgb(126, 16, 170);
+}
+
+.front {
+  transform: translateZ(100px);
+  background-image: url(./img/banner.png);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.back {
+  transform: translateZ(-100px) rotateY(180deg);
+  background-image: url(./img/fit.png);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.right {
+  transform: rotateY(-270deg) translateX(100px);
+  transform-origin: top right;
+  background-image: url(./img/game.png);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.left {
+  transform: rotateY(270deg) translateX(-100px);
+  transform-origin: center left;
+  background-image: url(./img/chess.png);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.top {
+  transform: rotateX(-270deg) translateY(-100px);
+  transform-origin: top center;
+  background-image: url(./img/wizard.png);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.bottom {
+  transform: rotateX(270deg) translateY(100px);
+  transform-origin: bottom center;
+  background-image: url(./img/fun.png);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+
+  to {
+    transform: rotateX(360deg) rotateY(360deg);
+  }
+}
+
+.cube {
+  animation: rotate 20s infinite linear;
+}
+
+.wrap:hover .front {
+  transform: translateZ(200px);
+}
+.wrap:hover .back {
+  transform: translateZ(-200px) rotateY(180deg);
+}
+.wrap:hover .right {
+  transform: rotateY(-270deg) translateZ(100px) translateX(100px);
+}
+.wrap:hover .left {
+  transform: rotateY(270deg) translateZ(100px) translateX(-100px);
+}
+.wrap:hover .top {
+  transform: rotateX(-270deg) translateZ(100px) translateY(-100px);
+}
+.wrap:hover .bottom {
+  transform: rotateX(270deg) translateZ(100px) translateY(100px);
+}
+
+.cube > div {
+  transition: transform 0.2s ease-in;
 }
