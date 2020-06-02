@@ -168,8 +168,8 @@ header {
 .header .menu-icon .navicon {
   display: block;
   background: rgb(247, 223, 8);
-  width: 20px;
-  height: 3px;
+  width: 25px;
+  height: 4px;
   position: relative;
 }
 
@@ -184,11 +184,11 @@ header {
 }
 
 .header .menu-icon .navicon::before {
-  top: 5px;
+  top: 7px;
 }
 
 .header .menu-icon .navicon::after {
-  top: -5px;
+  top: -7px;
 }
 
 .header .menu-icon .navicon {
@@ -269,24 +269,6 @@ header {
   position: relative;
 }
 
-/* .s1_bottom-element::before,
-.s1_bottom-element::after {
-  content: "/";
-  position: absolute;
-  font-size: 32px;
-  font-weight: bold;
-  color: rgb(247, 223, 8);
-}
-
-.s1_bottom-element::before {
-  transform: rotate(-63deg);
-  left: -16px;
-}
-
-.s1_bottom-element::after {
-  transform: rotate(26deg);
-} */
-
 .s1_list-item {
   padding-bottom: 16px;
   position: relative;
@@ -325,13 +307,18 @@ header {
   padding-top: 67px;
   margin-bottom: 76px;
   font-family: "Gotham Pro Bold";
-  font-size: 23px;
+  font-size: 30px;
 }
 
 .s2_list {
   display: flex;
-  flex-flow: column;
+  flex-flow: row wrap;
   justify-content: center;
+  padding-bottom: 66px;
+}
+
+.s2_list div {
+  padding-top: 10px;
 }
 
 .s2_list-item:hover {
@@ -350,9 +337,10 @@ header {
   width: 170px;
   height: 170px;
   border: 2px solid rgb(247, 223, 8);
-  margin-bottom: 58px;
-  padding: 50px;
+  padding-top: 55px;
   position: relative;
+  text-align: center;
+  margin: 20px;
 }
 
 .s2_list-item::before {
@@ -368,19 +356,19 @@ header {
   left: 38px;
 }
 
-.s2_list-item:nth-child(1)::before {
+.s2_1::before {
   background-image: url(./img/shop1.png);
 }
 
-.s2_list-item:nth-child(2)::before {
+.s2_2::before {
   background-image: url(./img/games2.png);
 }
 
-.s2_list-item:nth-child(3)::before {
+.s2_3::before {
   background-image: url(./img/club3.png);
 }
 
-.s2_list-item:nth-child(4)::before {
+.s2_4::before {
   background-image: url(./img/map4.png);
 }
 
@@ -592,11 +580,58 @@ div.ant-carousel-arrow-right {
   position: absolute;
   width: 30px;
   height: 30px;
-  background-image: url(./img/check.png);
   background-position: center;
   background-repeat: no-repeat;
   top: 1px;
   left: 30px;
+}
+
+.i1::before {
+  background-image: url(./img/coding.png);
+}
+
+.i2::before {
+  background-image: url(./img/car.png);
+}
+
+.i3::before {
+  background-image: url(./img/ticket.png);
+}
+
+.i4::before {
+  background-image: url(./img/dice.png);
+}
+
+.i5::before {
+  background-image: url(./img/solar-panel.png);
+}
+
+.i6::before {
+  background-image: url(./img/save.png);
+}
+
+.i7::before {
+  background-image: url(./img/sunglasses.png);
+}
+
+.i8::before {
+  background-image: url(./img/price.png);
+}
+
+.i9::before {
+  background-image: url(./img/ghost.png);
+}
+
+.i10::before {
+  background-image: url(./img/magic.png);
+}
+
+.i11::before {
+  background-image: url(./img/space.png);
+}
+
+.i12::before {
+  background-image: url(./img/castle.png);
 }
 
 .s5_list-title {
@@ -635,7 +670,7 @@ div.ant-carousel-arrow-right {
   position: absolute;
   width: 22px;
   height: 22px;
-  background-image: url(./img/icon_viber.png);
+  background-image: url(./img/telegram.png);
   background-repeat: no-repeat;
   background-position: center;
   left: 46px;
@@ -725,7 +760,7 @@ footer {
   .header .menu-icon .navicon::before {
     top: 10px;
   }
-  
+
   .header .menu-icon .navicon::after {
     top: -10px;
   }
@@ -804,42 +839,8 @@ footer {
     margin-right: 0;
   }
 
-  .s2_list-item::before {
-    content: "";
-    width: 85px;
-    height: 85px;
-    position: absolute;
-    background-repeat: no-repeat;
-    background-position: center;
-    border-radius: 50%;
-    background-color: rgb(247, 223, 8);
-    top: -41px;
-    left: 38px;
-  }
-
-  .s2_list-item:nth-child(1)::before {
-    background-image: url(./img/shop1.png);
-  }
-
-  .s2_list-item:nth-child(2)::before {
-    background-image: url(./img/games2.png);
-  }
-
-  .s2_list-item:nth-child(3)::before {
-    background-image: url(./img/club3.png);
-  }
-
-  .s2_list-item:nth-child(4)::before {
-    background-image: url(./img/map4.png);
-  }
-
   .s2_list-item p {
-    text-align: center;
-    font-size: 14px;
-    font-weight: bold;
-    font-family: "OpenSans";
-    margin-bottom: 5px;
-    padding: 1px;
+    font-size: 15px;
   }
 
   /*стили секции 3*/
