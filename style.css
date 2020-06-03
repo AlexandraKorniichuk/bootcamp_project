@@ -486,8 +486,28 @@ div.ant-carousel-arrow-right {
     no-repeat;
 }
 
-/* стили секции 4 */
+div.ant-carousel-dots {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  left: 0;
+  bottom: 64px;
+  z-index: 30;
+  text-align: center;
+}
 
+span.ant-dot {
+  width: 10px;
+  height: 10px;
+  margin: 5px 7px;
+  padding: 0;
+  display: inline block;
+  background-color: #bbb;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* стили секции 4 */
 .s4 {
   display: flex;
   flex-flow: column;
@@ -827,6 +847,10 @@ footer {
     margin: 0 40px;
     padding-bottom: 89px;
   }
+  
+  .s2_list div {
+    padding: 10px;
+  }
 
   .s2_list-item {
     width: 157px;
@@ -844,7 +868,6 @@ footer {
   }
 
   /*стили секции 3*/
-
   .s3 {
     background-image: url(./img/bg_s3_tb.jpg);
   }
