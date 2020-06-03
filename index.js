@@ -31,7 +31,9 @@ console.log("ключ последнего елемента списка", buf);
 
 crlsList.insertBefore(buf, crlsList.firstElementChild);
 
-crlsList.removeChild(elm);
+// crlsList.removeChild(elm);
+elm.remove
+
 console.log(crlsList);
 
 leftArrow.addEventListener("click", leftArrowClick);

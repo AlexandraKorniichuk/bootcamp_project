@@ -608,6 +608,7 @@ span.ant-dot {
 
 .i1::before {
   background-image: url(./img/coding.png);
+  top: 0;
 }
 
 .i2::before {
