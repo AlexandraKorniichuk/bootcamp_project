@@ -52,15 +52,62 @@ Ant.prototype.elemPrev = function (num) {
       elm = this.crslList.lastElementChild;
       buff = elm.cloneNode(true);
       this.crslList.insertBefore(buff, this.crslList.firstElementChild);
-      elm.remove;
+      elm.remove();
     }
-    this.crslList.style.marginLeft = "-" + this.elemWidth * num + "px";
+    // this.crslList.style.marginLeft = "-" + this.elemWidth * num + "px";
     let compStyle = window.getComputedStyle(this.crslList).marginLeft;
     this.crslList.style.cssText = 
       "transition:margin" + this.options.speed + "ms ease;";
     this.crslList.style.marginLeft = "0px";
     setTimeout(function () {
-      this$.crslList.firstElementChild;
-    }
+      this$.crslList.style.cssText = "transition:none;";
+    }, this.options.speed);
   }
 };
+
+Ant.prototype.elemNext = function (num) {
+  num = num || 1;
+
+  if (this.options.dots) this.dotOn(this.currentElement);
+  this.currentElement += num;
+  if (this.currentElement >= this.dotsVisible) this.currentElement = 0;
+  if (this.options.dots) this.dotOff(this.currentElement);
+
+  if (!this.options.loop) {
+    this.currentOffset -= this.elemWidth * num;
+    this.crslList.style.marginLeft = this.currentOffset + "px";
+    if (this.currentElement == this.dotsVisible - 1) {
+      this.rightArrow.style.display = "none";
+      this.touchNext = false;
+    }
+    this.leftArrow.style.display = "block";
+    this.touchPrev = true;
+  } else {
+    let elm, buf, this$ = this;
+    this.crslList.style.cssText =
+      "transition:margin " + this.options.speed + "ms ease;";
+    this.crslList.style.marginLeft = "-" + this.elemWidth * num + "px";
+    setTimeout(function () {
+      this$.crslList.style.cssText = "transition:none;";
+      for (let i = 0; i < num; i++) {
+        elm = this$.crslList.firstElementChild;
+        buf = elm.cloneNode(true);
+        this$.crslList.appendChild(buf);
+        this$.crslList.removeChild(elm);
+      }
+      this$.crslList.style.marginLeft = "0px";
+    }, this.options.speed);
+  }
+};
+
+Ant.prototype.dotOn = function (num) {
+  this.indicatorDotsAll[num].style.cssText =
+    "background-color:#BBB; cursor:pointer;";
+};
+
+Ant.prototype.dotOff = function (num) {
+  this.indicatorDotsAll[num].style.cssText =
+    "background-color:#556; cursor:default;";
+};
+
+

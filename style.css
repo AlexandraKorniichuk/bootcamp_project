@@ -77,7 +77,7 @@ header {
 .logo {
   text-transform: capitalize;
   color: white;
-  padding-left: 52px;
+  padding-left: 54px;
   font-family: "OpenSans";
   font-size: 16px;
   position: relative;
@@ -419,7 +419,8 @@ header {
 }
 
 .ant-carousel-element {
-  display: block;
+  display: flex;
+  flex-flow: column;
   text-align: center;
   margin: 0 20px;
   margin-top: 72px;
@@ -608,7 +609,7 @@ span.ant-dot {
 
 .i1::before {
   background-image: url(./img/coding.png);
-  top: 0;
+  top: 2px;
 }
 
 .i2::before {
@@ -748,8 +749,7 @@ footer {
   }
   /* стили хэдэра */
   .header_nav {
-    padding: 20px;
-    padding-bottom: 10px;
+    padding-top: 7px;
   }
 
   .header_nav a {
@@ -766,11 +766,14 @@ footer {
     margin: 0 5px;
   }
 
+  .logo {
+    padding-left: 70px;
+  }
+
   .logo::before {
     top: -14%;
     width: 60px;
     height: 60px;
-    left: -15px;
   }
 
   .header .menu-icon .navicon {
@@ -848,7 +851,7 @@ footer {
     margin: 0 40px;
     padding-bottom: 89px;
   }
-  
+
   .s2_list div {
     padding: 10px;
   }
@@ -878,7 +881,7 @@ footer {
   }
 
   .ant-carousel-hider {
-    justify-content: center;
+    justify-content: flex-start;
     width: 768px;
   }
 
@@ -1082,7 +1085,7 @@ footer {
   .s5 {
     flex-flow: row wrap;
     height: auto;
-    padding: 76px 50px 74px 237px;
+    padding: 76px 50px 74px 190px;
     justify-content: space-between;
   }
 
@@ -1100,6 +1103,14 @@ footer {
   .s5 div,
   .s5_list {
     padding-bottom: 20px;
+  }
+
+  .i1::before {
+    padding-top: 18px;
+  }
+
+  .i8::before {
+    padding-top: 25px;
   }
 
   .first-list {
@@ -1151,7 +1162,7 @@ footer {
   }
 
   .header .menu-icon {
-    padding-left: 600px;
+    padding-left: 800px;
   }
 }
 
