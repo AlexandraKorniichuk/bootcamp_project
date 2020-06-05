@@ -1,37 +1,3 @@
-@font-face {
-  font-family: "OpenSans";
-  src: url(./fonts/OpenSans-Regular.eot) format("embedded-opentype"),
-    url(./fonts/OpenSans-Regular.ttf) format("truetype"),
-    url(./fonts/OpenSans-Regular.woff) format("woff");
-  font-style: normal;
-  font-weight: normal;
-}
-
-@font-face {
-  font-family: "OpenSans Bold";
-  src: url(./fonts/OpenSans-Bold.eot) format("embedded-opentype"),
-    url(./fonts/OpenSans-Bold.ttf) format("truetype"),
-    url(./fonts/OpenSans-Bold.woff) format("woff");
-  font-style: normal;
-  font-weight: bold;
-}
-
-@font-face {
-  font-family: "Gotham Pro Bold";
-  src: url(./fonts/GothamPro-Bold.eot) format("embedded-opentype"),
-    url(./fonts/GothamPro-Bold.ttf) format("truetype"),
-    url(./fonts/GothamPro-Bold.woff) format("woff");
-  font-style: normal;
-  font-weight: bold;
-}
-
-@font-face {
-  font-family: "Coustard Regular";
-  src: url(./fonts/Coustard-Regular.ttf) format("truetype");
-  font-style: normal;
-  font-weight: normal;
-}
-
 * {
   margin: 0;
   box-sizing: border-box;
@@ -226,10 +192,14 @@ header {
 }
 
 /* стили секции 1 */
-.s1 {
+.s1, 
+.s1_list {
   display: flex;
   flex-flow: column;
   align-items: flex-start;
+}
+
+.s1 {
   color: white;
   background-color: #3f3e3e;
   background-image: url(./img/bg_s1.jpg);
@@ -249,9 +219,6 @@ header {
 }
 
 .s1_list {
-  display: flex;
-  flex-flow: column;
-  align-items: flex-start;
   min-width: 280px;
   font-family: "OpenSans";
   font-size: 14px;
@@ -400,10 +367,14 @@ header {
   position: relative;
 }
 
+.ant-carousel-list,
 .ant-carousel-hider {
   display: flex;
   flex-flow: row;
   justify-content: flex-start;
+}
+
+.ant-carousel-hider {
   margin: 0 auto;
   width: 320px;
   position: relative;
@@ -411,9 +382,6 @@ header {
 }
 
 .ant-carousel-list {
-  display: flex;
-  flex-flow: row;
-  justify-content: flex-start;
   width: auto;
 }
 
@@ -499,6 +467,9 @@ div.ant-carousel-dots {
   bottom: 64px;
   z-index: 30;
   text-align: center;
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
 }
 
 span.ant-dot {
@@ -506,7 +477,7 @@ span.ant-dot {
   height: 10px;
   margin: 5px 7px;
   padding: 0;
-  display: inline block;
+  display: flex;
   background-color: #bbb;
   border-radius: 5px;
   cursor: pointer;
@@ -1179,116 +1150,4 @@ footer {
   .header .menu-icon {
     padding-left: 900px;
   }
-}
-
-.wrap {
-  margin: 0 auto;
-  margin-top: 150px;
-  margin-bottom: 30px;
-  perspective: 1000px;
-  perspective-origin: 50% 50%;
-}
-
-.cube {
-  margin: auto;
-  position: relative;
-  height: 200px;
-  width: 200px;
-  transform-style: preserve-3d;
-}
-
-.cube > div {
-  position: absolute;
-  box-sizing: border-box;
-  padding: 10px;
-  height: 100%;
-  width: 100%;
-  opacity: 0.9;
-  background-color: white;
-  border: solid 2px rgb(114, 53, 138);
-  border-radius: 10%;
-  color: rgb(126, 16, 170);
-}
-
-.front {
-  transform: translateZ(100px);
-  background-image: url(./img/banner.png);
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.back {
-  transform: translateZ(-100px) rotateY(180deg);
-  background-image: url(./img/fit.png);
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.right {
-  transform: rotateY(-270deg) translateX(100px);
-  transform-origin: top right;
-  background-image: url(./img/game.png);
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.left {
-  transform: rotateY(270deg) translateX(-100px);
-  transform-origin: center left;
-  background-image: url(./img/chess.png);
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.top {
-  transform: rotateX(-270deg) translateY(-100px);
-  transform-origin: top center;
-  background-image: url(./img/wizard.png);
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.bottom {
-  transform: rotateX(270deg) translateY(100px);
-  transform-origin: bottom center;
-  background-image: url(./img/fun.png);
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-@keyframes rotate {
-  from {
-    transform: rotateX(0deg) rotateY(0deg);
-  }
-
-  to {
-    transform: rotateX(360deg) rotateY(360deg);
-  }
-}
-
-.cube {
-  animation: rotate 20s infinite linear;
-}
-
-.wrap:hover .front {
-  transform: translateZ(200px);
-}
-.wrap:hover .back {
-  transform: translateZ(-200px) rotateY(180deg);
-}
-.wrap:hover .right {
-  transform: rotateY(-270deg) translateZ(100px) translateX(100px);
-}
-.wrap:hover .left {
-  transform: rotateY(270deg) translateZ(100px) translateX(-100px);
-}
-.wrap:hover .top {
-  transform: rotateX(-270deg) translateZ(100px) translateY(-100px);
-}
-.wrap:hover .bottom {
-  transform: rotateX(270deg) translateZ(100px) translateY(100px);
-}
-
-.cube > div {
-  transition: transform 0.2s ease-in;
 }

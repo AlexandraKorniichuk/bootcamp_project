@@ -1,0 +1,34 @@
+@font-face {
+    font-family: "OpenSans";
+    src: url(./fonts/OpenSans-Regular.eot) format("embedded-opentype"),
+      url(./fonts/OpenSans-Regular.ttf) format("truetype"),
+      url(./fonts/OpenSans-Regular.woff) format("woff");
+    font-style: normal;
+    font-weight: normal;
+  }
+  
+  @font-face {
+    font-family: "OpenSans Bold";
+    src: url(./fonts/OpenSans-Bold.eot) format("embedded-opentype"),
+      url(./fonts/OpenSans-Bold.ttf) format("truetype"),
+      url(./fonts/OpenSans-Bold.woff) format("woff");
+    font-style: normal;
+    font-weight: bold;
+  }
+  
+  @font-face {
+    font-family: "Gotham Pro Bold";
+    src: url(./fonts/GothamPro-Bold.eot) format("embedded-opentype"),
+      url(./fonts/GothamPro-Bold.ttf) format("truetype"),
+      url(./fonts/GothamPro-Bold.woff) format("woff");
+    font-style: normal;
+    font-weight: bold;
+  }
+  
+  @font-face {
+    font-family: "Coustard Regular";
+    src: url(./fonts/Coustard-Regular.ttf) format("truetype");
+    font-style: normal;
+    font-weight: normal;
+  }
+  
