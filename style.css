@@ -401,29 +401,28 @@ header {
 }
 
 .ant-carousel-hider {
-  overflow: hidden;
   display: flex;
   flex-flow: row;
   justify-content: flex-start;
   margin: 0 auto;
   width: 320px;
   position: relative;
+  overflow: hidden;
 }
 
 .ant-carousel-list {
   display: flex;
+  flex-flow: row;
   justify-content: flex-start;
   width: auto;
-  flex-flow: row;
-  padding-bottom: 60px;
 }
 
 .ant-carousel-element {
   display: flex;
   flex-flow: column;
-  text-align: center;
-  margin: 0 20px;
-  margin-top: 72px;
+  text-align: flex-start;
+  padding: 90px 0;
+  margin: 20px;
 }
 
 .ant-carousel-element img {
@@ -442,7 +441,8 @@ header {
   font-size: 16px;
   font-weight: bold;
   position: relative;
-  margin-top: 18px;
+  margin-top: 10px;
+  padding-left: 50px;
 }
 
 .ant-carousel-element p::before {
@@ -464,11 +464,6 @@ header {
   z-index: 90;
 }
 
-/* .ant-carousel-arrow-left:hover,
-.ant-carousel-arrow-right:hover {
-  opacity: 1;
-} */
-
 /* левая стрелка слайдера */
 div.ant-carousel-arrow-left {
   left: -2px;
@@ -486,6 +481,15 @@ div.ant-carousel-arrow-right {
   background: url("http://pvbk.spb.ru/inc/carousel/ant-files/ant-arrow-right.png")
     no-repeat;
 }
+
+div.ant-carousel-arrow-left:hover {
+  opacity: 1;
+}
+
+div.ant-carousel-arrow-right:hover {
+  opacity: 1;
+}
+
 
 div.ant-carousel-dots {
   width: 100%;
@@ -881,7 +885,7 @@ footer {
   }
 
   .ant-carousel-hider {
-    justify-content: flex-start;
+    justify-content: center;
     width: 768px;
   }
 
@@ -894,9 +898,21 @@ footer {
     height: 240px;
   }
 
+  .ant-carousel-element p {
+    margin-top: 18px;
+  }
+
   .ant-carousel-arrow-left,
   .ant-carousel-arrow-right {
     z-index: 98;
+  }
+
+  div.ant-carousel-arrow-left {
+    left: -2px;
+  }
+
+  div.ant-carousel-arrow-right {
+    right: -2px;
   }
 
   /* стили секции 4 */
@@ -1037,16 +1053,15 @@ footer {
   .s3 {
     background-image: url(./img/bg_s3_dt.jpg);
   }
+  
+  .ant-carousel-hider {
+    width: 1280px;
+  }
 
   .ant-carousel-element {
     width: 570px;
     margin: 0 25px;
-    margin-top: 88px;
-    margin-bottom: 30px;
-  }
-
-  .ant-carousel-hider {
-    width: 1280px;
+    padding: 85px 0;
   }
 
   .ant-carousel-element img {
@@ -1156,13 +1171,13 @@ footer {
   }
 }
 
-@media (min-width: 1804px) {
+@media (min-width: 1784px) {
   .container {
-    min-width: 1804px;
+    min-width: 1784px;
   }
 
   .header .menu-icon {
-    padding-left: 800px;
+    padding-left: 900px;
   }
 }
 
