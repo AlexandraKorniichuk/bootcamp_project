@@ -83,7 +83,6 @@ header {
 .nav_list-item a:hover,
 .nav_list-item a:focus {
   color: rgb(247, 223, 8);
-  font-size: large;
 }
 
 .header ul {
